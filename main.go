@@ -3,7 +3,7 @@ package main
 import (
 	"flag"
 	"fmt"
-	"github.com/ChainFront/stellar-xdr-signer/pkg/stellartx"
+	"github.com/ChainFront/stellar-tx-signer/pkg/stellartx"
 	"github.com/awnumar/memguard"
 	"golang.org/x/crypto/ssh/terminal"
 	"log"

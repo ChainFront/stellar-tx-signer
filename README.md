@@ -1,4 +1,4 @@
-# Stellar XDR Signer
+# Stellar XDR Transaction Signer
 
 This repo contains a simple golang program to sign an XDR transaction for the Stellar network.
 
@@ -12,7 +12,7 @@ In order to first generate an XDR encoded transaction you can use the [Stellar L
 
 Then use this utility to sign the transaction, by running the following:
 
-    ./stellar-xdr-signer --xdr <Base64 Encoded XDR String>
+    ./stellar-tx-signer --xdr <Base64 Encoded XDR String>
     
 This will prompt you for the seed necessary to sign the transaction.
 

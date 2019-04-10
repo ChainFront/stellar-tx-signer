@@ -1,4 +1,4 @@
-PROJECT_NAME := "stellar-xdr-signer"
+PROJECT_NAME := "stellar-tx-signer"
 
 PKG := "github.com/ChainFront/$(PROJECT_NAME)"
 
