@@ -5,12 +5,10 @@ import (
 	"fmt"
 	"github.com/ChainFront/stellar-xdr-signer/pkg/stellartx"
 	"github.com/awnumar/memguard"
-	"github.com/stellar/go/keypair"
 	"golang.org/x/crypto/ssh/terminal"
 	"log"
 	"os"
 	"syscall"
-	"unsafe"
 )
 
 func main() {
@@ -40,14 +38,6 @@ func main() {
 	lockedSeed, err := getSeedInput()
 	if err != nil {
 		log.Fatalln("Unable to read input", err)
-	}
-
-	// Validate that the key is valid
-	lockedSeedPtr := (*[32]byte)(unsafe.Pointer(&lockedSeed.Buffer()[0]))
-	_, err = keypair.FromRawSeed(*lockedSeedPtr)
-	if err != nil {
-		fmt.Println("Invalid private key, please check your input and try again: ", err)
-		memguard.SafeExit(1)
 	}
 
 	// Sign the transaction

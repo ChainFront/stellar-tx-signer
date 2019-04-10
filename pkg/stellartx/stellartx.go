@@ -19,8 +19,11 @@ func DecodeTx(xdrString string) (*xdr.TransactionEnvelope, error) {
 	fmt.Println("")
 	fmt.Println("Decoded Transaction Details:")
 	fmt.Printf("  Source Account: %s\n", tx.Tx.SourceAccount.Address())
-	fmt.Printf("  Number of Operations: %d\n", len(tx.Tx.Operations))
 	fmt.Printf("  Number of Signatures: %d\n", len(tx.Signatures))
+	fmt.Printf("  Number of Operations: %d\n", len(tx.Tx.Operations))
+	for index, op := range tx.Tx.Operations {
+		fmt.Printf("     - Operation %d: %s\n", index+1, op.Body.Type.String())
+	}
 	fmt.Println("")
 
 	return &tx, nil

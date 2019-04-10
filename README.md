@@ -8,11 +8,11 @@ This repo contains a simple golang program to sign an XDR transaction for the St
 
 ## Usage
 
-In order to generate an XDR encoded transaction you can use the [Stellar Laboratory](https://www.stellar.org/laboratory/#?network=public).
+In order to first generate an XDR encoded transaction you can use the [Stellar Laboratory](https://www.stellar.org/laboratory/#?network=public).
 
-To sign the transaction, run the following:
+Then use this utility to sign the transaction, by running the following:
 
-    ./stellar-xdr-signer -xdr=<Base64 Encoded XDR String>
+    ./stellar-xdr-signer --xdr <Base64 Encoded XDR String>
     
 This will prompt you for the seed necessary to sign the transaction.
 
